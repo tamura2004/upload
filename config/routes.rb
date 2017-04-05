@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :plans
-  resources :documents
+
+  get "plans/new", to: "plans#new"
+  get "plans", to: "plans#index"
+  post "plans", to: "plans#create"
   root "plans#new"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end
